@@ -41,17 +41,17 @@ routes_eth1:
         netmask: 64
         gateway: fc00:1234:1::26
 
-routes_eth2:
-  network.routes:
-    - name: eth2
-    - routes:    
-      - name: LAN1
-        ipaddr: 172.16.2.128/28
-        gateway: 172.16.2.151
-      - name: LAN2
-        ipaddr: 172.16.2.160/28
-        gateway: 172.16.2.151
-      - name: LAN4
-        ipaddr: 172.16.2.176/28
-        gateway: 172.16.2.151    
+#routes_eth2:
+#  network.routes:
+#    - name: eth2
+#    - routes:    
+#      - name: LAN1
+#        ipaddr: 172.16.2.128/28
+#        gateway: 172.16.2.151
+#      - name: LAN2
+#        ipaddr: 172.16.2.160/28
+#        gateway: 172.16.2.151
+#      - name: LAN4
+#        ipaddr: 172.16.2.176/28
+#        gateway: 172.16.2.151    
 
