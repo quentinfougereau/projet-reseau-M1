@@ -48,6 +48,7 @@ int main (int argc, char** argv){
   printf("Création de %s\n",argv[1]);
   tunfd = tun_alloc(argv[1]);
   printf("Faire la configuration de %s...\n",argv[1]);
+  system("/mnt/partage/configure-tun.sh");
   printf("Appuyez sur une touche pour continuer\n");
   getchar();
   printf("Interface %s Configurée:\n",argv[1]);

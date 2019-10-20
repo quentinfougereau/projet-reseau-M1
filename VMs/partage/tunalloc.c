@@ -1,17 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <sys/socket.h> 
-#include <sys/stat.h>
-#include <sys/ioctl.h>
-
-#include <unistd.h>
-#include <fcntl.h>
-#include <linux/if.h>
-#include <linux/if_tun.h>
-
-
-
+#include "iftun.h"
 
 int tun_alloc(char *dev)
 {
@@ -48,6 +35,7 @@ int main (int argc, char** argv){
   printf("Création de %s\n",argv[1]);
   tunfd = tun_alloc(argv[1]);
   printf("Faire la configuration de %s...\n",argv[1]);
+  system("/mnt/partage/configure-tun.sh");
   printf("Appuyez sur une touche pour continuer\n");
   getchar();
   printf("Interface %s Configurée:\n",argv[1]);
