@@ -7,15 +7,11 @@ void iftun(int src, int dest){
         exit(1);
     }
 
-    int res = read(src, buffer, SIZE_BUFFER);
-
-    if(res < 0){
+    int read_count = read(src, buffer, SIZE_BUFFER);
+    
+    if(read_count < 0){
         perror("Erreur read");
     }
 
-    int wr = write(buffer, dest, SIZE_BUFFER);
-
-    if(wr < 0){
-        perror("Erreur write");
-    }
+    write(dest, buffer, read_count);
 }
