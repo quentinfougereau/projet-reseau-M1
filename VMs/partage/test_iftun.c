@@ -1,4 +1,5 @@
-#include "iftun.h"
+#include "iftun.c"
+#include "tunalloc.c"
 
 void main(int argc, char** argv){
 

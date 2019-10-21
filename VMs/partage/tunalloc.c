@@ -1,4 +1,4 @@
-#include "iftun.h"
+#include "tunalloc.h"
 
 int tun_alloc(char *dev)
 {

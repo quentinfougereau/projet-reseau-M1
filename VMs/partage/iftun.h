@@ -15,6 +15,5 @@
 #define SIZE_BUFFER 1024
 
 void iftun(int src, int dest);
-int tun_alloc(char *dev);
 
 #endif
