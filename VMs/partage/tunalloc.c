@@ -1,5 +1,5 @@
 #include "tunalloc.h"
-
+#include "iftun.h"
 int tun_alloc(char *dev)
 {
   struct ifreq ifr;
