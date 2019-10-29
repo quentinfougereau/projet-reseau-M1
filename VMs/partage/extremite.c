@@ -41,6 +41,7 @@ void ext_out(char* ip_addr) {
       exit(EXIT_FAILURE);
     }
     //Redirection des données
+    printf("lol");
     iftun(client,1);
   }
 
