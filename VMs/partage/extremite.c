@@ -1,4 +1,5 @@
 #include "extremite.h"
+#include "iftun.h"
 
 void ext_out(char* ip_addr) {
   struct sockaddr_in my_addr;
@@ -39,24 +40,15 @@ void ext_out(char* ip_addr) {
       perror("accept");
       exit(EXIT_FAILURE);
     }
-
-    if (read(client, buffer, SIZE_BUFFER) == -1) {
-      perror("read");
-      exit(EXIT_FAILURE);
-    }
-
-    if (write(1, buffer, SIZE_BUFFER) == -1) {
-      perror("write");
-      exit(EXIT_FAILURE);
-    }
-
+    //Redirection des données
+    iftun(client,1);
   }
 
 }
 
-void ext_int(char* addr, int port) {
+void ext_int(char* addr, int port,int tun_fd) {
   struct sockaddr_in address;
-  char* msg = "Hello from client";
+  char msg[SIZE_BUFFER];
 
   int client_fd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -78,24 +70,9 @@ void ext_int(char* addr, int port) {
     perror("connect failed");
     exit(EXIT_FAILURE);
   }
-
-  send(client_fd, msg, strlen(msg), 0);
-
-}
-
-int main(int argc, char** argv) {
-  if (atoi(argv[1]) == 1) {
-    char* ip_addr = argv[2];
-    printf("Lancement du serveur\n");
-    ext_out(ip_addr);
+  while (1)
+  {
+    iftun(tun_fd,client_fd);
   }
 
-  if (atoi(argv[1]) == 2) {
-    char* ip_addr = argv[2];
-    int port = atoi(argv[3]);
-    printf("Lancement du client \n");
-    ext_int(ip_addr, port);
-  }
-
-  return 0;
 }

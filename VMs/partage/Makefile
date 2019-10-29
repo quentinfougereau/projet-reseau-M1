@@ -2,13 +2,13 @@ CC=gcc
 RM=rm -f
 
 SOURCES=$(wildcard *.c)
-DEPENDENCIES=$(filter-out $(MAINS),$(SOURCES))
+DEPENDENCIES=$(filter-out $(TESTS),$(SOURCES))
 HEADERS=$(wildcard *.h)
 BASENAMES=$(basename $(SOURCES)) 
 OBJECTS=$(addsuffix .o , $(BASENAMES))
-MAINS= test_iftun.c test.c
-ACTUAL_MAIN?= test_iftun.c
-EXEC= $(basename $(ACTUAL_MAIN)) 
+TESTS= test_iftun.c test_extremite.c test.c
+MAIN?=test_extremite.c
+EXEC= $(basename $(MAIN)) 
 
 #compile toutes les sources et créer l'executable
 all: $(EXEC)
@@ -18,13 +18,13 @@ all: $(EXEC)
 	$(CC) $(CFLAGS) -c $*.c
 	@echo
 #Créer l'exécutable
-$(EXEC): $(DEPENDENCIES) $(ACTUAL_MAIN)
+$(EXEC): $(DEPENDENCIES) $(MAIN)
 	@echo "\033[1;32m=== LINKING OBJECTS INTO $(EXEC) ===\033[0m"
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
 	@echo "\033[1;31m=== CLEANING OBJECTS ===\033[0m"
-	$(RM) $(OBJECTS) $(basename $(MAINS))
+	$(RM) $(OBJECTS) $(basename $(TESTS))
 
 display:
 	@echo "SOURCES:" $(SOURCES)
