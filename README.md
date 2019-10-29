@@ -15,10 +15,10 @@ make destroy-all
 
 Pour lancer le serveur :
 ```bash
-sudo ./extremte 1 172.16.2.151
+sudo ./extremite 1 172.16.2.151
 ```
 
 Pour lancer le client :
 ```bash
-sudo ./extremte 2 172.16.2.151 123
+sudo ./extremite 2 172.16.2.151 123
 ```
