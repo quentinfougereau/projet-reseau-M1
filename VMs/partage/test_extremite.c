@@ -9,6 +9,7 @@ int main(int argc, char** argv) {
     tunfd = tun_alloc(argv[3]);
     printf("Faire la configuration de %s...\n",argv[3]);
     printf("Appuyez sur une touche pour continuer\n");
+    system("/mnt/partage/config-tun-VM1.sh");
     getchar();
     printf("Interface %s Configurée:\n",argv[1]);
     system("ip addr");
