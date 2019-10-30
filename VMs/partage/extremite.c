@@ -1,7 +1,7 @@
 #include "extremite.h"
 #include "iftun.h"
 
-void ext_out(char* ip_addr) {
+void ext_out(char* ip_addr,int tun_fd) {
   struct sockaddr_in my_addr;
   int port = 123;
   int client;
@@ -50,7 +50,7 @@ void ext_out(char* ip_addr) {
   while (1) {
     //Redirection des données
     //printf("lol");
-    iftun(client,1);
+    iftun(client,tun_fd);
   }
 
 }
