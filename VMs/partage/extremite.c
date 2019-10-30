@@ -47,11 +47,27 @@ void ext_out(char* ip_addr,int tun_fd) {
     exit(EXIT_FAILURE);
   }
 
-  while (1) {
-    //Redirection des données
-    //printf("lol");
-    iftun(client,tun_fd);
+  if (fork() == 0) {
+
+    while (1) {
+      //Redirection des données
+      //printf("lol");
+      iftun(client,tun_fd);
+    }
+
+    exit(0);
+
+  } else {
+
+    while (1) {
+      //Redirection des données
+      //printf("lol");
+      iftun(tun_fd, client);
+    }
+
   }
+
+  wait();
 
 }
 
@@ -79,9 +95,22 @@ void ext_int(char* addr, int port,int tun_fd) {
     exit(EXIT_FAILURE);
   }
 
+  if (fork() == 0) {
 
-  while (1) {
-    iftun(tun_fd, client_fd);
+    while (1) {
+      iftun(tun_fd, client_fd);
+    }
+
+    exit(0);
+
+  } else {
+
+    while (1) {
+      iftun(client_fd, tun_fd);
+    }
+
   }
+
+  wait();
 
 }
