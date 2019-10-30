@@ -7,11 +7,18 @@ void ext_out(char* ip_addr) {
   int client;
   char buffer[SIZE_BUFFER];
   int addrlen = sizeof(my_addr);
+  int opt = 1;
 
   int server_fd = socket(AF_INET, SOCK_STREAM, 0);
 
   if (server_fd == -1) {
     perror("socket failed");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Prevents error such as: “address already in use”. */
+  if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
+    perror("setsockopt");
     exit(EXIT_FAILURE);
   }
 
@@ -35,13 +42,14 @@ void ext_out(char* ip_addr) {
     exit(EXIT_FAILURE);
   }
 
+  if ((client = accept(server_fd, (struct sockaddr *) &my_addr, (socklen_t *) &addrlen)) == -1) {
+    perror("accept");
+    exit(EXIT_FAILURE);
+  }
+
   while (1) {
-    if ((client = accept(server_fd, (struct sockaddr *) &my_addr, (socklen_t *) &addrlen)) == -1) {
-      perror("accept");
-      exit(EXIT_FAILURE);
-    }
     //Redirection des données
-    printf("lol");
+    //printf("lol");
     iftun(client,1);
   }
 
@@ -49,7 +57,6 @@ void ext_out(char* ip_addr) {
 
 void ext_int(char* addr, int port,int tun_fd) {
   struct sockaddr_in address;
-  char msg[SIZE_BUFFER];
 
   int client_fd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -71,9 +78,10 @@ void ext_int(char* addr, int port,int tun_fd) {
     perror("connect failed");
     exit(EXIT_FAILURE);
   }
-  while (1)
-  {
-    iftun(tun_fd,client_fd);
+
+
+  while (1) {
+    iftun(tun_fd, client_fd);
   }
 
 }
