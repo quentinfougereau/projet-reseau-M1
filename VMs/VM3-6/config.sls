@@ -6,7 +6,7 @@ NetworkManager:
   service:
     - dead
     - enable: False
-    
+
 ## Suppression de la passerelle par défaut
 ip route del default:
   cmd:
@@ -40,10 +40,18 @@ routes_eth1:
         ipv6ipaddr: fc00:1234:1::/64
         gateway: fc00:1234:2::26
 
+routes_tun0:
+  network.routes:
+    - name: tun0
+    - routes:
+      - name: LAN3
+        ipaddr: 172.16.2.144/28
+        gateway: 172.16.2.3
+
 #routes_eth2:
-#  network.routes:        
+#  network.routes:
 #    - name: eth2
-#    - routes: 
+#    - routes:
 #      - name: LAN2
 #        ipaddr: 172.16.2.160/28
 #        gateway: 172.16.2.183
@@ -52,6 +60,4 @@ routes_eth1:
 #        gateway: 172.16.2.183
 #      - name: LAN3
 #        ipaddr: 172.16.2.144/28
-#        gateway: 172.16.2.183    
-
-
+#        gateway: 172.16.2.183
