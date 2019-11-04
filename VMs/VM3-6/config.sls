@@ -40,24 +40,8 @@ routes_eth1:
         ipv6ipaddr: fc00:1234:1::/64
         gateway: fc00:1234:2::26
 
-routes_tun0:
-  network.routes:
-    - name: tun0
-    - routes:
-      - name: LAN3
-        ipaddr: 172.16.2.144/28
-        gateway: 172.16.2.3
-
-#routes_eth2:
-#  network.routes:
-#    - name: eth2
-#    - routes:
-#      - name: LAN2
-#        ipaddr: 172.16.2.160/28
-#        gateway: 172.16.2.183
-#      - name: LAN1
-#        ipaddr: 172.16.2.128/28
-#        gateway: 172.16.2.183
-#      - name: LAN3
-#        ipaddr: 172.16.2.144/28
-#        gateway: 172.16.2.183
+## Enable ipv4 forwarding
+net.ipv4.ip_forward:
+  sysctl:
+    - present
+    - value: 1

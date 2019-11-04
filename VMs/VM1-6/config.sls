@@ -41,13 +41,11 @@ routes_eth1:
         netmask: 64
         gateway: fc00:1234:1::26
 
-routes_tun0:
-  network.routes:
-    - name: tun0
-    - routes:
-      - name: LAN4
-        ipaddr: 172.16.2.176/28
-        gateway: 172.16.2.1
+## Enable ipv4 forwarding
+net.ipv4.ip_forward:
+  sysctl:
+    - present
+    - value: 1
 
 #routes_eth2:
 #  network.routes:
