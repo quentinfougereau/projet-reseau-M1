@@ -7,7 +7,7 @@ HEADERS=$(wildcard *.h)
 BASENAMES=$(basename $(SOURCES)) 
 OBJECTS=$(addsuffix .o , $(BASENAMES))
 TESTS= test_iftun.c test_extremite.c test.c
-MAIN?=test_extremite.c
+MAIN?=tunnel46d.c
 EXEC= $(basename $(MAIN)) 
 
 #compile toutes les sources et créer l'executable

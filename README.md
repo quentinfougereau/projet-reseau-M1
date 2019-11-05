@@ -22,3 +22,9 @@ Pour lancer le client :
 ```bash
 sudo ./test_extremite 2 172.16.2.151 123
 ```
+## Tunnel46d 
+
+Pour lancer le tunnel:
+```bash
+sudo ./tunnel46d <fichier de config> <script config tun>
+```
