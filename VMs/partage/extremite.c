@@ -46,18 +46,20 @@ void ext_out(char* ip_addr,int tun_fd) {
     perror("accept");
     exit(EXIT_FAILURE);
   }
-    while (1) {
-      //Redirection des données
-      //printf("lol");
-      iftun(client,tun_fd);
-    }
-    close(client);
+
+  while (1) {
+    //Redirection des données
+    //printf("lol");
+    iftun(client,tun_fd);
+  }
+  close(client);
 }
 
 void ext_int(char* addr, int port,int tun_fd) {
   struct sockaddr_in6 address;
 
   int client_fd = socket(AF_INET6, SOCK_STREAM, 0);
+  int con;
 
   address.sin6_family = AF_INET6;
   address.sin6_port = htons(port);
@@ -73,9 +75,16 @@ void ext_int(char* addr, int port,int tun_fd) {
     exit(EXIT_FAILURE);
   }
 
+  /*
   if (connect(client_fd, (struct sockaddr *) &address, sizeof(address)) == -1) {
     perror("connect failed");
     exit(EXIT_FAILURE);
+  }
+  */
+
+  while ((con = connect(client_fd, (struct sockaddr *) &address, sizeof(address))) == -1) {
+    printf("connect failed : the server may be unavailable \n");
+    sleep(5);
   }
 
   while (1) {

@@ -10,7 +10,7 @@ int main(int argc, char**argv){
     char inport[5];
     char options[100];
     char outip[64];
-    char outport[5];   
+    char outport[5];
     pid_t filsPID;
     FILE* fichier_config = NULL;
 
@@ -38,11 +38,11 @@ int main(int argc, char**argv){
         perror("Erreur dans la lecture du fichier");
         exit(EXIT_FAILURE);
     }
-    
 
-    
+
+
     printf("Création de %s\n",tun_name);
-    printf("%s %s %s %s",inip,inport,outip,outport);
+    printf("%s %s %s %s \n",inip,inport,outip,outport);
     tunfd = tun_alloc(tun_name);
     system(argv[2]);
 
@@ -56,7 +56,7 @@ int main(int argc, char**argv){
 	if(filsPID == 0) //Entree tunnel
 	{
         printf("Lancement du client \n");
-		sleep(10); //pour avoir le temps de le lancer sur la 2eme machine
+		//sleep(10); //pour avoir le temps de le lancer sur la 2eme machine
 		ext_int(outip,atoi(inport),tunfd);
 		return 0;
 	}else
@@ -64,7 +64,7 @@ int main(int argc, char**argv){
         printf("Lancement du serveur\n");
 	    ext_out(inip,tunfd);
     }
-    
-	
+
+
     return 0;
 }
