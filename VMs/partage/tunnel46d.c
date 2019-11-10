@@ -11,6 +11,7 @@ int main(int argc, char**argv){
     char options[100];
     char outip[64];
     char outport[5];
+    char * tunconfigfile;
     pid_t filsPID;
     FILE* fichier_config = NULL;
 
@@ -21,13 +22,14 @@ int main(int argc, char**argv){
     fichier_config = fopen(argv[1],"r+");
     if(fichier_config != NULL){
         int r = fscanf(fichier_config,
-                        "# interface tun\ntun=%s\n# adresse locale\ninip=%s\ninport=%s\noptions=%s\n# adresse distante\noutip=%s\noutport=%s",
+                        "# interface tun\ntun=%s\n# adresse locale\ninip=%s\ninport=%s\noptions=%s\n# adresse distante\noutip=%s\noutport=%s\ntunconfigfile=%s",
                         tun_name,
                         inip,
                         inport,
                         options,
                         outip,
-                        outport);
+                        outport,
+                        tunconfigfile);
         if(r<=0){
             perror("Erreur dans la syntaxe du fichier");
             fclose(fichier_config);
@@ -44,7 +46,7 @@ int main(int argc, char**argv){
     printf("Création de %s\n",tun_name);
     printf("%s %s %s %s \n",inip,inport,outip,outport);
     tunfd = tun_alloc(tun_name);
-    system(argv[2]);
+    system(tunconfigfile);
 
     filsPID = fork();
 
