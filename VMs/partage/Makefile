@@ -6,7 +6,7 @@ DEPENDENCIES=$(filter-out $(TESTS),$(SOURCES))
 HEADERS=$(wildcard *.h)
 BASENAMES=$(basename $(SOURCES)) 
 OBJECTS=$(addsuffix .o , $(BASENAMES))
-TESTS= test_iftun.c test_extremite.c test.c
+TESTS=test_iftun.c test_extremite.c test.c tunnel46d.c
 MAIN?=tunnel46d.c
 EXEC= $(basename $(MAIN)) 
 

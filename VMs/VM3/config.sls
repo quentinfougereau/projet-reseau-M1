@@ -50,17 +50,3 @@ net.ipv4.ip_forward:
   sysctl:
     - present
     - value: 1
-
-## Configure inetd
-update-inetd --add "echo stream tcp nowait nobody internal":
-  cmd:
-    - run
-
-## Lance inetd
-service inetutils-inetd start:
-  cmd:
-    - run
-
-service inetutils-inetd restart:
-  cmd:
-    - run

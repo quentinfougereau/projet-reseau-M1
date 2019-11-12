@@ -33,7 +33,7 @@ routes:
   network.routes:
     - name: eth2
     - routes:
-      - name: LAN3
+      - name: LAN4
         ipaddr: 172.16.2.176/28
         gateway: 172.16.2.156
 
