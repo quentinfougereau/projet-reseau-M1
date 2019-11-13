@@ -1,0 +1,14 @@
+Ecoute sur le port 5000
+le nÂ° de la socket est : 3
+Option(s) OK!
+bind!
+listen!
+accept! (4) ip=172.16.2.151 port=56032
+[172.16.2.151:56032](3619):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:56032](3619): TerminÃ©.
+iperf3: interrupt - the server has terminated
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 34283
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 34284

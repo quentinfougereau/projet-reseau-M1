@@ -1,6 +1,10 @@
 # Configuration eth1
 # RAPPEL: eth0 est à vagrant, ne pas y toucher
 
+apt install -yy iperf3:
+  cmd:
+    - run
+
 ## Désactivation de network-manager
 NetworkManager:
   service:

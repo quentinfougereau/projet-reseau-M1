@@ -1,5 +1,6 @@
 # Configuration eth1
 # RAPPEL: eth0 est à vagrant, ne pas y toucher
+
 ## Désactivation de network-manager
 ip route add default via 10.0.2.2:
   cmd:
@@ -8,6 +9,11 @@ ip route add default via 10.0.2.2:
 dhclient eth0:
   cmd:
     - run
+
+apt install -yy iperf3:
+  cmd:
+    - run
+
 apt install -yy inetutils-inetd:
   cmd:
     - run
