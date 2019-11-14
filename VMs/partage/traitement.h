@@ -6,6 +6,6 @@
 #include <string.h>
 
 void test(int read_count, char buffer[]);
-char * tailleauto(char buffer[], int length_pos, int packet_size);
+char * tailleauto(unsigned char buffer[], int length_pos, int packet_size);
 
 #endif

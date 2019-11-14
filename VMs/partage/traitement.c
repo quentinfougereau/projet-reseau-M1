@@ -26,19 +26,15 @@ void test(int read_count, char buffer[]) {
   }
 }
 
-int get_packet_size(char buffer[], int length_pos) {
+int get_packet_size(unsigned char buffer[], int length_pos) {
   return buffer[length_pos];
 }
 
-char * tailleauto(char buffer[], int length_pos, int packet_size) {
+char * tailleauto(unsigned char buffer[], int length_pos, int packet_size) {
   char * data = (char *) malloc(sizeof(char) * packet_size);
   int i;
   for (i = 0; i < packet_size; i++) {
     data[i] = buffer[i];
   }
   return data;
-}
-
-int tailleentete_in() {
-
 }

@@ -2,7 +2,7 @@
 #include "traitement.h"
 
 void iftun(int src, int dest) {
-    char buffer[SIZE_BUFFER];
+    unsigned char buffer[SIZE_BUFFER];
     if(src < 0 || dest < 0) {
         perror("Error src or dest");
         exit(1);

@@ -3,12 +3,290 @@ le nÂ° de la socket est : 3
 Option(s) OK!
 bind!
 listen!
-accept! (4) ip=172.16.2.151 port=56032
-[172.16.2.151:56032](3619):   1 :[TEST] Bonjour Echo Serveur !
-[172.16.2.151:56032](3619): TerminÃ©.
-iperf3: interrupt - the server has terminated
+accept! (4) ip=172.16.2.151 port=59748
+[172.16.2.151:59748](1745):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:59748](1745): TerminÃ©.
+accept! (4) ip=172.16.2.151 port=59757
+[172.16.2.151:59757](1745):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:59757](1745): TerminÃ©.
+accept! (4) ip=172.16.2.151 port=59766
+[172.16.2.151:59766](1745):   1 :Ceci est un tres long message de de 128 octets..................................[172.16.2.151:59766](1745):   2 :..............;;;
+[172.16.2.151:59766](1745):   3 :Ceci est un tres long message de de 128 octets..................................[172.16.2.151:59766](1745):   4 :..............
+[172.16.2.151:59766](1745): TerminÃ©.
+accept! (4) ip=172.16.2.151 port=59767
+[172.16.2.151:59767](1745):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:59767](1745): TerminÃ©.
+accept! (4) ip=172.16.2.151 port=59776
+[172.16.2.151:59776](1745):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:59776](1745): TerminÃ©.
+accept! (4) ip=172.16.2.151 port=59785
+[172.16.2.151:59785](1745):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:59785](1745): TerminÃ©.
+accept! (4) ip=172.16.2.151 port=59794
+[172.16.2.151:59794](1745):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:59794](1745): TerminÃ©.
+accept! (4) ip=172.16.2.151 port=59803
+[172.16.2.151:59803](1745):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:59803](1745): TerminÃ©.
+accept! (4) ip=172.16.2.151 port=59811
+[172.16.2.151:59811](1745):   1 :[TEST] Bonjour Echo Serveur !
+[172.16.2.151:59811](1745): TerminÃ©.
+.00 bits/sec                  receiver
 -----------------------------------------------------------
 Server listening on 5201
 -----------------------------------------------------------
-Accepted connection from 172.16.2.151, port 34283
-[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 34284
+Accepted connection from 172.16.2.151, port 41832
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41833
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec  67.9 KBytes  2.20 Mbits/sec    0             sender
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41834
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41835
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.02   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.02   sec  79.2 KBytes  36.5 Mbits/sec    0             sender
+[  5]   0.00-0.02   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41837
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41838
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.24   sec   100 Bytes  3.28 Kbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.24   sec   100 Bytes  3.28 Kbits/sec    0             sender
+[  5]   0.00-0.24   sec   100 Bytes  3.28 Kbits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41839
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41840
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.04   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.04   sec  20.0 KBytes  3.85 Mbits/sec    0             sender
+[  5]   0.00-0.04   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41841
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41842
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec  89.1 KBytes  2.94 Mbits/sec    0             sender
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41843
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41844
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.23   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.23   sec  79.2 KBytes  2.79 Mbits/sec    0             sender
+[  5]   0.00-0.23   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41847
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41848
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.04   sec  10.0 Bytes  1.91 Kbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.04   sec   100 Bytes  19.1 Kbits/sec    0             sender
+[  5]   0.00-0.04   sec  10.0 Bytes  1.91 Kbits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41849
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41850
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec  20.0 KBytes   645 Kbits/sec    0             sender
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41851
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41852
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.04   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.04   sec  77.8 KBytes  14.7 Mbits/sec    0             sender
+[  5]   0.00-0.04   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41853
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41854
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec  79.2 KBytes  2.64 Mbits/sec    0             sender
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41856
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41857
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.04   sec  10.0 Bytes  1.93 Kbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.04   sec   100 Bytes  19.3 Kbits/sec    0             sender
+[  5]   0.00-0.04   sec  10.0 Bytes  1.93 Kbits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41858
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41859
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec  20.0 KBytes   649 Kbits/sec    0             sender
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41860
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41861
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.04   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.04   sec  82.0 KBytes  15.7 Mbits/sec    0             sender
+[  5]   0.00-0.04   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41862
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41863
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.23   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.23   sec  77.8 KBytes  2.72 Mbits/sec    0             sender
+[  5]   0.00-0.23   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41865
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41866
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec   100 Bytes  3.26 Kbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec   100 Bytes  3.26 Kbits/sec    0             sender
+[  5]   0.00-0.25   sec   100 Bytes  3.26 Kbits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41867
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41868
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec  20.0 KBytes   657 Kbits/sec    0             sender
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41869
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41870
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.24   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.24   sec  72.1 KBytes  2.42 Mbits/sec    0             sender
+[  5]   0.00-0.24   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41871
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41872
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.23   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.23   sec  72.1 KBytes  2.56 Mbits/sec    0             sender
+[  5]   0.00-0.23   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41874
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41875
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec   100 Bytes  3.17 Kbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec   100 Bytes  3.17 Kbits/sec    0             sender
+[  5]   0.00-0.25   sec   100 Bytes  3.17 Kbits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41876
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41877
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.24   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.24   sec  20.0 KBytes   671 Kbits/sec    0             sender
+[  5]   0.00-0.24   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41878
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41879
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.25   sec  72.1 KBytes  2.39 Mbits/sec    0             sender
+[  5]   0.00-0.25   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41880
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41881
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.03   sec  0.00 Bytes  0.00 bits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.03   sec  79.2 KBytes  24.0 Mbits/sec    0             sender
+[  5]   0.00-0.03   sec  0.00 Bytes  0.00 bits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41883
+[  5] local 172.16.2.183 port 5201 connected to 172.16.2.151 port 41884
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-0.26   sec   100 Bytes  3.07 Kbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  5]   0.00-0.26   sec   100 Bytes  3.07 Kbits/sec    0             sender
+[  5]   0.00-0.26   sec   100 Bytes  3.07 Kbits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 172.16.2.151, port 41885
+[  5] l
